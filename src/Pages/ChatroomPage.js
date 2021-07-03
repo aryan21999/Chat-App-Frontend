@@ -22,7 +22,7 @@ const ChatroomPage = ({ match, socket }) => {
     const token = localStorage.getItem("CC_Token");
     if (token) {
       const payload = JSON.parse(atob(token.split(".")[1]));
-      setUserId(payload.id);\
+      setUserId(payload.id);
     }
     if (socket) {
       socket.on("newMessage", (message) => {
